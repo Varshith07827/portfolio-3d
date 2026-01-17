@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+  --background-noir: #030303;
+  --text-primary: #f0f0f0;
+  --text-secondary: #888888;
+  --accent-noir: #ffffff;
+
+  --background-hero: #0a0505;
+  --accent-hero: #ff0000;
+
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background-noir);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  /* Behind the Spider-Man background */
+  outline: none;
+}
+
+/* Typography with tight tracking for premium feel */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+section {
+  min-height: auto;
+  /* Reduced from 100vh to reduce gaps */
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Premium Glass Cards */
+.glass-card {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.5rem;
+  border-radius: 16px;
+  /* Rounded corners for premium feel */
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle noise texture on cards */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glass-card:hover {
+  background: rgba(20, 20, 20, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Leap Button - The "Trigger" */
+.leap-button {
+  background: #ffffff;
+  color: #000000;
+  padding: 1.2rem 3rem;
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border-radius: 12px;
+  /* Rounded corners */
+  transition: all 0.3s ease;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 50;
+  /* Ensure clickable */
+  pointer-events: auto;
+}
+
+.leap-button:hover {
+  transform: scale(1.02);
+  background: #e0e0e0;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+.spiderman-mode .leap-button {
+  background: #ff0000;
+  color: white;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
+
+/* Theme Utilities */
+.text-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #666666 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spiderman-mode li {
+  color: #cccccc !important;
+}
+
+.bg-spiderman {
+  background-image: url('./assets/spiderman.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* Smoother fade */
+  z-index: -1;
+  /* Above canvas, behind content */
+  mix-blend-mode: normal;
+  /* Use normal blend for visibility */
+  /* Blend with 3D scene */
+}
+
+.spiderman-mode .bg-spiderman {
+  opacity: 0.65;
+}
+
+.glitch-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glitch-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ---------------------------------------------------- */
+/* MIGRATED STYLES FROM ContentOverlay.jsx              */
+/* ---------------------------------------------------- */
+
+.content-root {
+  position: relative;
+  z-index: 99;
+  /* Force above all backgrounds */
+  width: 100%;
+}
+
+/* Ensure text visibility in Hero/Noir Mode */
+/* Ensure text visibility in Hero/Noir Mode - NUCLEAR Z-INDEX FIX */
+.spiderman-mode .content-root {
+  color: white;
+}
+
+/* Force ALL text white and visible in spiderman mode to prevent hiding */
+/* Force text white and visible in spiderman mode */
+.spiderman-mode .content-root h1,
+.spiderman-mode .content-root h2,
+.spiderman-mode .content-root h3,
+.spiderman-mode .content-root h4,
+.spiderman-mode .content-root p,
+.spiderman-mode .content-root span,
+.spiderman-mode .content-root li,
+.spiderman-mode .content-root a {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Specific fix for gradients: remove background ONLY from gradient text */
+.spiderman-mode .text-gradient {
+  background: none !important;
+}
+
+/* Re-enable buttons and specific UI elements if needed, but start with safe visibility */
+.spiderman-mode .leap-button {
+  background: #ff0000 !important;
+  /* Keep button red */
+  color: white !important;
+}
+
+.sub-heading {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Specifically target the hero h1 */
+#hero .text-gradient {
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.headline {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: var(--text-secondary);
+}
+
+.skills-grid,
+.projects-grid,
+.experience-grid,
+.achievements-grid,
+.perspectives-grid,
+.interests-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skills-grid,
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.experience-grid {
+  grid-template-columns: 1fr;
+}
+
+.achievements-grid,
+.perspectives-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.interests-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.skill-list li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.social-links a {
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  color: var(--accent-noir);
+}
+
+.about-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(5, 5, 5, 0.6);
+}
+
+.about-content p {
+  font-family: var(--font-main);
+  /* Inter */
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+.top-corner-links {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 100;
+}
+
+.icon-link {
+  color: white;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: var(--accent-noir);
+}
+
+.giant-heading {
+  font-family: var(--font-heading);
+  /* Outfit */
+  font-size: clamp(2.7rem, 6vw, 5rem) !important;
+  /* Reduced to ~60% */
+  margin-bottom: 2rem;
+  line-height: 1;
+  background: linear-gradient(to bottom, #ffffff, #666666);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  /* Tight tracking for Outfit */
+  margin-left: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-corner-links {
+    top: 1.5rem;
+    right: 1.5rem;
+    gap: 1rem;
+  }
+}
+
+/* Project Card Polish */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-header {
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.role-tag {
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-noir);
+  opacity: 0.8;
+  display: block;
+}
+
+.project-desc {
+  font-family: var(--font-main);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: auto;
+  /* Pushes tech stack down */
+  font-size: 1rem;
+}
+
+.project-tech {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-link {
+  margin-top: 1rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-link {
+  opacity: 1;
+}
+
+/* Interest Card Polish */
+.interest-card {
+  padding: 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  /* Subtle background */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.interest-header {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  /* Matches project card */
+  margin-bottom: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.interest-content {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+
+/* Stats Polish */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-title {
+  font-family: var(--font-heading);
+  color: var(--accent-noir);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-sub {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Highlights Polish */
+.highlight-card {
+  padding: 2.5rem;
+  grid-column: 1 / -1;
+  /* Span full width */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.highlight-header {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.highlight-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.highlight-list li {
+  font-family: var(--font-main);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+}
+
+.highlight-list li::before {
+  content: "•";
+  color: var(--accent-noir);
+  font-weight: bold;
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
+
+}

@@ -1,0 +1,227 @@
+1. Landing / Hero Section
+
+Varshith
+Software Engineer • ML/AI Developer • Systems & OS Enthusiast
+Building things that actually work. Breaking things to understand why they don’t.
+6× Hackathon Winner • AI Systems • NFC Payment Architect
+
+Links:
+
+Email
+
+LinkedIn
+
+GitHub
+
+Resume (PDF)
+
+2. About Me
+
+A dual-degree B.Tech + B.Sc student who started as the introverted, two-movies-a-day guy and somehow ended up organizing massive tech events, winning hackathons on streak, and building systems people actually use. I like solving problems that punch back—operating systems, AI pipelines, NFC infrastructure, system design, and hackathon chaos.
+
+I believe in the 1% mentality: learn faster, build faster, ship better. My work blends creativity, sarcasm, and that student-chaos energy that turns ideas into functioning prototypes at 3 AM.
+
+I don’t chase clout. I chase craft.
+
+3. Skills & Tech Stack
+Programming Languages
+
+Java, Python, C, C++, JavaScript, SQL
+
+Frameworks & Libraries
+
+Flask, TensorFlow, GANs, Pandas, NumPy, Scikit-Learn, Matplotlib
+
+Tools & Platforms
+
+Git, Docker, Termux Linux, Jupyter, Linux (Ubuntu), Razorpay API, SQLite, VS Code
+
+Core Concepts
+
+Operating Systems, Page Replacement, Banker’s Algorithm, Deadlocks, Producer-Consumer, Memory Allocation, Graph Theory, Automata Theory, Turing Machines, Probability & Statistics, ML model training, Embedded systems (Ultrasonic sensors + Servo)
+
+4. Experience
+Languify.ai – Intern
+
+2025
+
+Worked on real-world tech tasks and design implementations.
+
+Improved problem-solving speed across API design, debugging, and system-level thinking.
+
+Event Organizer (Campus)
+
+Led and executed large-scale events within one week.
+
+Managed operations, logistics, and team coordination.
+
+Brought structure into absolute chaos.
+
+Many more roles and internships.
+worked under an us based company and built solutions to real world problems faced by a company(automations using playwright, selenium, python and n8n)
+
+5. Projects
+HEALIO – AI-Driven Early Disease Detection
+
+Role: Full-stack + ML
+Problem: Detect diseases before symptoms become irreversible.
+Features:
+
+Patient & doctor registration
+
+Appointment system
+
+ML-based symptom-to-disease prediction
+
+Alerts & anomaly detection
+Tech: Flask, SQLite, ML models
+What you learned: System design, medical workflows, early detection logic.
+
+ByteCoins – NFC-Based Payment System
+
+Role: Full-stack backend + system architecture
+Problem: Create an NFC payment system for real-money transactions within college.
+Features:
+
+Admin-only NFC writing
+
+User-only NFC reading
+
+Razorpay integration
+
+Role-based access control
+
+Secure token handling
+Tech: Java, NFC, Razorpay API
+What you learned: Tokenization, access control, financial flow logic.
+
+Graph Theory Assignment Suite
+
+DFS, BFS, Topological Sort, Dijkstra, Bellman-Ford, Floyd-Warshall, MST, negative cycle detection.
+Converted multiple C OS programs to Python equivalents.
+Used for competitive prep + academic mastery.
+
+GAN-Based AI Art Generator (Hackathon Project)
+
+Role: ML Developer
+Problem: Build an AI art generator from scratch using TensorFlow + GANs.
+Status: Completed (3050 GPU).
+What you learned: GAN architectures, CUDA tooling, image generation pipelines.
+
+Ultrasonic Obstacle Detection System (Real-Time)
+
+Role: Embedded developer
+System: Ultrasonic + servo motor + terminal-based visualization
+Outcome: A real-time sweep-scanning obstacle detection setup.
+
+HireHub – Workforce Micro-Matching System
+
+SE Project (Idea Implementation)
+Abstract: A system that connects large companies needing temporary, small-volume manpower with workers ready for single-event or short-duration tasks.
+Problem Statement: Lack of centralized infrastructure for micro-duration manpower requirements leads to inefficiency for both companies and workers.
+
+6. Achievements & Wins
+
+6× Hackathon Winner (back-to-back streak)
+
+Organized large-scale tech events within a week
+
+Built multiple end-to-end systems across domains
+
+Rapid learning streak across OS, ML, FLAT, Stats, and Graph Theory
+
+Survived 4-hour sleep cycles, broken keyboards, and caffeine-powered sprints
+
+7. LinkedIn Posts & Thought Leadership
+
+Themes you write about:
+
+Top 1% mentality
+
+Peer pressure and student struggle
+
+Hackathon stories (selection delays, unexpected outcomes)
+
+B.Tech journey updates
+
+End-of-year reflections
+
+Event organization behind the scenes
+
+Personal growth + academic grind
+
+Your style:
+Direct, witty, slightly sarcastic, student-coded, aggressive when needed, confident always.
+
+8. Research & Publications
+
+(Currently none formal, but HEALIO has research potential.)
+
+9. Open Source Contributions
+
+Multiple C → Python OS problems
+
+Algorithm libraries
+
+Implementation correctness-heavy repos
+
+(Not heavily public yet; future expansion likely.)
+
+10. Certifications & Courses
+
+NPTEL: Joy of Computing using Python
+
+College coursework: OS, FLAT, DBMS, CN, Data Science, ML
+
+Probability & Statistics modules
+
+11. Leadership & Community
+
+Event Organizer (executed 2 major events in 1 week)
+
+Hackathon leadership and team structuring
+
+Community mentoring during project builds
+
+12. Interests & Curiosities
+Technical
+
+AI systems
+
+Operating systems internals
+
+NFC systems
+
+Graph algorithms
+
+ML model training optimization
+
+Termux Linux tinkering
+
+System design thinking
+
+Personal
+
+Hardcore learning phases
+
+Adventure energy
+
+Student chaos + sarcasm
+
+Loyalty & 1% mentality
+
+13. Testimonials
+
+(You can add mentor/friend comments later.)
+
+14. Resume Snapshot
+
+(One-page version can be generated on request.)
+
+15. Contact
+
+Email · LinkedIn · GitHub
+
+16. Footer
+
+Built with consistency, caffeine, and questionable sleep cycles.

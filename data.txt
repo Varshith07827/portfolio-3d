@@ -1,0 +1,282 @@
+1. Landing / Hero Section
+
+Purpose: First 5 seconds decide everything.
+
+Full Name
+
+Primary Role (e.g., Software Engineer | AI Systems | Problem Solver)
+
+One-line value statement (not a bio, a punch)
+
+Location (optional)
+
+Resume download button (PDF)
+
+Contact CTAs: Email · LinkedIn · GitHub · Portfolio
+
+Subtle metrics (optional but deadly):
+
+Hackathons won
+
+Projects built
+
+Years coding
+
+2. About Me (Narrative, Not Resume Copy)
+
+Purpose: Human + intent.
+
+Short story: where you started → what you do → where you’re going
+
+Core philosophy / mindset (your “top 1%” angle fits here)
+
+What problems excite you
+
+What you’re not interested in (optional but bold)
+
+3. Skills & Tech Stack
+
+Purpose: Scannability for recruiters + credibility for engineers.
+
+a. Programming Languages
+
+With proficiency levels or usage context
+
+b. Frameworks & Libraries
+
+Frontend
+
+Backend
+
+ML / AI / Data
+
+c. Tools & Platforms
+
+Version control
+
+Cloud
+
+DevOps
+
+Databases
+
+d. Concepts & Fundamentals
+
+OS, DBMS, CN, DSA, SE, ML, etc.
+(This section quietly separates engineers from coders.)
+
+4. Experience
+
+Purpose: Proof of execution.
+
+For each role:
+
+Role title
+
+Organization
+
+Duration
+
+Problem you worked on
+
+What you built (not what the company does)
+
+Tech stack
+
+Measurable outcomes
+
+Include:
+
+Internships
+
+Freelance
+
+Research
+
+Volunteer tech roles
+
+5. Projects (Core of the Portfolio)
+
+Purpose: This is where respect is earned.
+
+For each project:
+
+Project name
+
+One-line problem statement
+
+Context (hackathon / personal / academic / research)
+
+Your role (explicit)
+
+Architecture overview
+
+Key features
+
+Tech stack
+
+Challenges faced
+
+What you learned
+
+GitHub link
+
+Live demo / video / slides
+
+Sub-sections (optional but powerful):
+
+Flagship Projects
+
+Hackathon Projects
+
+Academic Projects
+
+Experimental / Side Builds
+
+6. Achievements & Wins
+
+Purpose: Signal excellence without bragging.
+
+Hackathon wins (with ranks)
+
+Competitions
+
+Scholarships
+
+Certifications (only relevant ones)
+
+Grants / recognitions
+
+Any measurable milestones
+
+7. LinkedIn Posts & Thought Leadership
+
+Purpose: Shows thinking, not just doing.
+
+Curated posts (not all)
+
+Topics you write about
+
+Engagement metrics (optional)
+
+What you stand for professionally
+
+You can group them by:
+
+Tech insights
+
+Personal growth
+
+Project breakdowns
+
+Opinion pieces
+
+8. Research & Publications (If Applicable)
+
+Purpose: Academic + deep-work credibility.
+
+Papers
+
+Posters
+
+Ongoing research
+
+Problem statements explored
+
+9. Open Source Contributions
+
+Purpose: Industry maturity.
+
+Repositories contributed to
+
+Nature of contribution
+
+PR links
+
+Issues solved
+
+10. Certifications & Courses
+
+Purpose: Structured learning proof.
+
+Course name
+
+Platform
+
+Skills gained
+
+Completion year
+
+Avoid dumping—curate.
+
+11. Leadership & Community
+
+Purpose: Influence beyond code.
+
+Campus roles
+
+Event organization
+
+Mentorship
+
+Communities built or led
+
+Ambassador programs
+
+12. Interests & Curiosities
+
+Purpose: Cultural fit + personality.
+
+Technical interests (e.g., AI ethics, system design)
+
+Non-technical interests (keep it sharp, not random)
+
+What you’re currently exploring
+
+This makes interviews human.
+
+13. Testimonials / Recommendations
+
+Purpose: Social proof.
+
+Mentors
+
+Teammates
+
+Judges
+
+Managers
+
+Short. Authentic. Specific.
+
+14. Resume Snapshot
+
+Purpose: Recruiter convenience.
+
+One-page condensed version
+
+Downloadable
+
+ATS-friendly
+
+15. Contact & Call-to-Action
+
+Purpose: Convert interest into conversation.
+
+Email
+
+LinkedIn
+
+GitHub
+
+Calendly / booking link
+
+“Let’s build something useful” style CTA
+
+16. Footer (Often Ignored, Still Important)
+
+Copyright
+
+Tech used to build portfolio
+
+Version / last updated date
