@@ -2,12 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-3d</title>
+    <meta http-equiv="refresh" content="0; url=Portfolio%20-%20Professional.html" />
+    <title>Varshith Sandaka — Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: system-ui, sans-serif;
+        background: #f1ead8;
+        color: #1d1813;
+      }
+      a {
+        color: inherit;
+      }
+      .card {
+        max-width: 36rem;
+        padding: 2rem;
+        border: 1px solid #d6c9a8;
+        border-radius: 1rem;
+        background: rgba(250, 246, 236, 0.92);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      }
+      .card h1 {
+        margin: 0 0 0.75rem;
+        font-size: 2rem;
+      }
+      .card p {
+        margin: 0 0 1.25rem;
+        line-height: 1.6;
+        color: #5a4f40;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .links a {
+        padding: 0.8rem 1rem;
+        border-radius: 999px;
+        border: 1px solid #1d1813;
+        text-decoration: none;
+      }
+      .links a.primary {
+        background: #1d1813;
+        color: #faf6ec;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <main class="card">
+      <h1>Varshith Sandaka</h1>
+      <p>The portfolio is live. If the redirect does not fire, use one of the links below.</p>
+      <div class="links">
+        <a class="primary" href="Portfolio%20-%20Professional.html">Open professional portfolio</a>
+        <a href="Portfolio%20-%20Personal.html">Open personal portfolio</a>
+      </div>
+    </main>
   </body>
 </html>
