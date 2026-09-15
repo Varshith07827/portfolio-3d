@@ -1,65 +1,445 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=Portfolio%20-%20Professional.html" />
-    <title>Varshith Sandaka — Portfolio</title>
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        font-family: system-ui, sans-serif;
-        background: #f1ead8;
-        color: #1d1813;
-      }
-      a {
-        color: inherit;
-      }
-      .card {
-        max-width: 36rem;
-        padding: 2rem;
-        border: 1px solid #d6c9a8;
-        border-radius: 1rem;
-        background: rgba(250, 246, 236, 0.92);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-      }
-      .card h1 {
-        margin: 0 0 0.75rem;
-        font-size: 2rem;
-      }
-      .card p {
-        margin: 0 0 1.25rem;
-        line-height: 1.6;
-        color: #5a4f40;
-      }
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-      }
-      .links a {
-        padding: 0.8rem 1rem;
-        border-radius: 999px;
-        border: 1px solid #1d1813;
-        text-decoration: none;
-      }
-      .links a.primary {
-        background: #1d1813;
-        color: #faf6ec;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="card">
-      <h1>Varshith Sandaka</h1>
-      <p>The portfolio is live. If the redirect does not fire, use one of the links below.</p>
-      <div class="links">
-        <a class="primary" href="Portfolio%20-%20Professional.html">Open professional portfolio</a>
-        <a href="Portfolio%20-%20Personal.html">Open personal portfolio</a>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Venkata Sai Varshith — AI / Systems / Automation</title>
+<meta name="description" content="Venkata Sai Varshith — AI, systems and automation engineer. City-scale simulation, browser and desktop automation, and AI tooling that handles real work.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { background: #0A0A0A; scroll-behavior: smooth; }
+  body { margin: 0; background: #0A0A0A; color: #FAFAFA; font-family: "Space Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  * { box-sizing: border-box; }
+  a { color: #FAFAFA; text-decoration: none; }
+  a:hover { color: #D9FF00; }
+  ::selection { background: #D9FF00; color: #0A0A0A; }
+  :focus-visible { outline: 2px solid #D9FF00; outline-offset: 3px; }
+  h1, h2, h3, h4, p, ul, ol, figure { margin: 0; padding: 0; }
+  ul, ol { list-style: none; }
+  img { display: block; max-width: 100%; }
+  @keyframes vdrift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
+
+  .navlink { color: #8A8A8A; }
+  .navlink:hover { color: #FAFAFA; }
+  .taglink { border: 1px solid #2A2A2A; }
+  .taglink:hover { border-color: #FAFAFA; color: #FAFAFA; }
+  .emailbtn { border: 1px solid #D9FF00; color: #D9FF00; }
+  .emailbtn:hover { background: #D9FF00; color: #0A0A0A; }
+  .worklink:hover { color: #FAFAFA; }
+  .contacttile:hover { background: #D9FF00; color: #0A0A0A; }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; overflow-x: hidden;">
+
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px clamp(16px, 4vw, 64px); background: rgba(10,10,10,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid #1C1C1C;">
+  <a href="#top" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">Varshith</a>
+  <nav aria-label="Sections" style="display: flex; gap: clamp(12px, 2.2vw, 28px); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">
+    <a href="#work" class="navlink">WORK</a>
+    <a href="#experience" class="navlink">EXPERIENCE</a>
+    <a href="#problem-solving" class="navlink">CP</a>
+    <a href="#about" class="navlink">ABOUT</a>
+    <a href="#contact" class="navlink">CONTACT</a>
+  </nav>
+</header>
+
+<main id="top" style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 64px);">
+
+  <section aria-label="Introduction" style="padding: clamp(110px, 17vh, 190px) 0 clamp(48px, 8vh, 96px);">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; margin-bottom: clamp(24px, 5vh, 56px);">VISAKHAPATNAM, INDIA — SELECTED WORK / 2026</p>
+    <h1 style="font-size: clamp(42px, 12.5vw, 176px); font-weight: 700; line-height: 0.86; letter-spacing: -0.045em;">VENKATA SAI<br>VARSHITH</h1>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 4vw, 64px); align-items: end; margin-top: clamp(32px, 6vh, 72px); padding-top: clamp(24px, 4vh, 40px); border-top: 1px solid #1C1C1C;">
+      <div>
+        <h2 style="font-size: clamp(22px, 2.8vw, 44px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em;">AI <span style="color: #D9FF00;">/</span> SYSTEMS <span style="color: #D9FF00;">/</span> AUTOMATION</h2>
+        <p style="margin-top: 18px; max-width: 46ch; font-size: clamp(15px, 1.2vw, 19px); line-height: 1.5; color: #A8A8A8;">I build software that does more than sit on a screen — city-scale simulation, automation engines that drive other software, and AI tooling that handles real work.</p>
       </div>
-    </main>
-  </body>
+      <ul style="display: flex; flex-wrap: wrap; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em;">
+        <li><a href="https://github.com/Varshith07827" target="_blank" rel="noopener" class="taglink" style="display: inline-block; padding: 12px 16px;">GITHUB ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener" class="taglink" style="display: inline-block; padding: 12px 16px;">LINKEDIN ↗</a></li>
+        <li><a href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener" class="taglink" style="display: inline-block; padding: 12px 16px;">RÉSUMÉ ↗</a></li>
+        <li><a href="mailto:sandakavarshith@gmail.com" class="emailbtn" style="display: inline-block; padding: 12px 16px;">EMAIL ↗</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: clamp(40px, 9vh, 88px); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: #5A5A5A;">
+      <span style="display: inline-block; animation: vdrift 2.6s ease-in-out infinite;">↓</span><span>SIX SELECTED SYSTEMS</span>
+    </div>
+  </section>
+
+  <section id="work" style="padding: clamp(56px, 10vh, 120px) 0 0; border-top: 1px solid #1C1C1C;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">SELECTED WORK</h2>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #5A5A5A;">01 — 06</p>
+    </div>
+
+    <article style="margin-top: clamp(32px, 6vh, 72px);">
+      <a href="case.html#digitwin" class="worklink" style="display: block;">
+        <div style="display: flex; align-items: flex-start; gap: clamp(16px, 3vw, 40px); flex-wrap: wrap;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #D9FF00; padding-top: 0.7em;">01</span>
+          <div style="flex: 1 1 320px; min-width: 0;">
+            <h3 style="font-size: clamp(38px, 9vw, 132px); font-weight: 700; line-height: 0.88; letter-spacing: -0.04em;">DIGITWIN</h3>
+            <p style="margin-top: 14px; font-size: clamp(17px, 1.9vw, 30px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.15;">City-scale digital twin &amp; infrastructure simulation</p>
+          </div>
+          <p style="flex: 0 1 300px; max-width: 40ch; font-size: 15px; line-height: 1.55; color: #A8A8A8; padding-top: 0.5em;">A 3D twin of central London built on real OpenStreetMap geometry, with the water network modelled as a graph you can break, isolate and repair to watch failure propagate.</p>
+        </div>
+        <figure style="margin-top: clamp(24px, 4vh, 44px); border: 1px solid #1C1C1C; background: #0D0D0D;">
+          <img src="assets/digitwin-network.jpeg" alt="DigiTwin in a browser: 3D London buildings with road and water-network overlays beside a water simulation panel" loading="lazy" style="width: 100%; height: auto;">
+          <figcaption style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 12px 16px; border-top: 1px solid #1C1C1C; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;"><span>WATER NETWORK OVER OSM ROAD GRAPH</span><span>CESIUM / RESIUM · FASTAPI · NETWORKX</span></figcaption>
+        </figure>
+        <div style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: 1px;">
+          <p style="flex: 1 1 170px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8A8A8A;">3D BUILDINGS + TERRAIN</p>
+          <p style="flex: 1 1 170px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8A8A8A;">PRESSURE SIMULATION</p>
+          <p style="flex: 1 1 170px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8A8A8A;">PIPE BREAK / REPAIR</p>
+          <p style="flex: 1 1 170px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8A8A8A;">BUILDING ISOLATION</p>
+          <p style="flex: 1 1 170px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #8A8A8A;">ROAD CLOSURE STATE</p>
+          <p style="flex: 1 1 170px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #D9FF00;">CASE STUDY →</p>
+        </div>
+      </a>
+    </article>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 56px); margin-top: clamp(56px, 10vh, 120px);">
+      <article>
+        <a href="case.html#mantis" class="worklink" style="display: block;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D9FF00;">02</span>
+            <h3 style="font-size: clamp(30px, 4.6vw, 68px); font-weight: 700; line-height: 0.92; letter-spacing: -0.035em;">MANTIS</h3>
+          </div>
+          <p style="margin-top: 10px; font-size: clamp(16px, 1.5vw, 22px); font-weight: 500; letter-spacing: -0.01em;">Browser automation platform</p>
+          <div style="margin-top: 20px; aspect-ratio: 16 / 10; border: 1px solid #1C1C1C; background: #0D0D0D; overflow: hidden;">
+            <img src="assets/placeholder-mantis.svg" alt="Mantis" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <p style="margin-top: 18px; max-width: 48ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">Records a browser session once, then replays it as a parameterised workflow — scheduled, retried, logged and monitored from one dashboard.</p>
+          <p style="margin-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">NODE.JS · EXPRESS · PLAYWRIGHT · SQLITE</p>
+        </a>
+      </article>
+      <article>
+        <a href="case.html#winspark" class="worklink" style="display: block;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D9FF00;">03</span>
+            <h3 style="font-size: clamp(30px, 4.6vw, 68px); font-weight: 700; line-height: 0.92; letter-spacing: -0.035em;">WINSPARK</h3>
+          </div>
+          <p style="margin-top: 10px; font-size: clamp(16px, 1.5vw, 22px); font-weight: 500; letter-spacing: -0.01em;">Desktop automation engine</p>
+          <div style="margin-top: 20px; aspect-ratio: 16 / 10; border: 1px solid #1C1C1C; background: #0D0D0D; overflow: hidden;">
+            <img src="assets/placeholder-winspark.svg" alt="WinSpark" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <p style="margin-top: 18px; max-width: 48ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">Software controlling software: drives WhatsApp Desktop through the Windows accessibility tree, routes every message through a webhook, and persists state before each irreversible step so a crash can be recovered from.</p>
+          <p style="margin-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">PYTHON · WINDOWS UI AUTOMATION · MONGODB · PYSIDE6</p>
+        </a>
+      </article>
+    </div>
+    <article style="margin-top: clamp(56px, 10vh, 120px); padding-top: clamp(28px, 5vh, 56px); border-top: 1px solid #1C1C1C;">
+      <a href="case.html#green-ring" class="worklink" style="display: block;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(20px, 4vw, 56px); align-items: start;">
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D9FF00;">04</span>
+              <h3 style="font-size: clamp(30px, 5.6vw, 84px); font-weight: 700; line-height: 0.9; letter-spacing: -0.04em;">GREEN RING</h3>
+            </div>
+            <p style="margin-top: 12px; font-size: clamp(16px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.012em;">WhatsApp automation &amp; messaging infrastructure</p>
+          </div>
+          <p style="max-width: 46ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">A FastAPI bridge over WhatsApp messaging rather than a chat client: authenticated send and media operations, validated configuration, and MongoDB Atlas archival of everything that passes through.</p>
+        </div>
+        <ul style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: clamp(20px, 3vh, 32px); border: 1px solid #1C1C1C; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">
+          <li style="flex: 1 1 190px; background: #0A0A0A; padding: 16px 14px;">AUTH &amp; SESSION HANDLING</li>
+          <li style="flex: 1 1 190px; background: #0A0A0A; padding: 16px 14px;">MEDIA + SEND OPERATIONS</li>
+          <li style="flex: 1 1 190px; background: #0A0A0A; padding: 16px 14px;">MONGODB ATLAS ARCHIVAL</li>
+          <li style="flex: 1 1 190px; background: #0A0A0A; padding: 16px 14px;">RUNS AS A SERVICE</li>
+        </ul>
+        <div style="margin-top: clamp(22px, 4vh, 40px); height: clamp(160px, 26vh, 260px); border: 1px solid #1C1C1C; background: #0D0D0D; overflow: hidden;">
+          <img src="assets/placeholder-green-ring.svg" alt="Green Ring" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+      </a>
+    </article>
+
+    <article style="margin-top: clamp(56px, 10vh, 120px); padding-top: clamp(28px, 5vh, 56px); border-top: 1px solid #1C1C1C;">
+      <a href="case.html#pii" class="worklink" style="display: block;">
+        <div style="display: flex; align-items: baseline; gap: 14px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D9FF00;">05</span>
+          <h3 style="font-size: clamp(30px, 5.2vw, 76px); font-weight: 700; line-height: 0.9; letter-spacing: -0.04em;">AI PII DETECTOR</h3>
+        </div>
+        <p style="margin-top: 12px; font-size: clamp(16px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.012em;">Privacy detection &amp; data masking</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(20px, 3vw, 48px); margin-top: clamp(20px, 3vh, 32px);">
+          <p style="max-width: 46ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">Finds sensitive information before it becomes a problem. A hybrid regex and spaCy NLP pipeline reads PDF, DOCX, CSV, XLSX and TXT files, scores risk, then masks what it finds — in batch, from the CLI or the web app.</p>
+          <ul style="display: flex; flex-wrap: wrap; gap: 8px; align-content: start; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8A8A8A;">
+            <li style="padding: 9px 12px; border: 1px solid #262626;">PDF</li>
+            <li style="padding: 9px 12px; border: 1px solid #262626;">DOCX</li>
+            <li style="padding: 9px 12px; border: 1px solid #262626;">CSV</li>
+            <li style="padding: 9px 12px; border: 1px solid #262626;">XLSX</li>
+            <li style="padding: 9px 12px; border: 1px solid #262626;">TXT</li>
+            <li style="padding: 9px 12px; border: 1px solid #262626;">REGEX + SPACY</li>
+            <li style="padding: 9px 12px; border: 1px solid #262626;">RISK SCORING</li>
+            <li style="padding: 9px 12px; border: 1px solid #262626;">BATCH / CLI</li>
+          </ul>
+        </div>
+      </a>
+    </article>
+
+    <article style="margin-top: clamp(56px, 10vh, 120px); padding-top: clamp(28px, 5vh, 56px); border-top: 1px solid #1C1C1C;">
+      <a href="case.html#atlas" class="worklink" style="display: block;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: clamp(20px, 4vw, 56px); align-items: end;">
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D9FF00;">06</span>
+              <h3 style="font-size: clamp(30px, 5.6vw, 84px); font-weight: 700; line-height: 0.9; letter-spacing: -0.04em;">ATLAS</h3>
+            </div>
+            <p style="margin-top: 12px; font-size: clamp(16px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.012em;">Personal productivity system</p>
+          </div>
+          <p style="max-width: 46ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">Tasks, notes and time in one calm surface. The engineering sits underneath: one store abstraction serving either local storage or Supabase, optimistic mutations, realtime sync, and a PWA shell that works offline.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: #1C1C1C; margin-top: clamp(22px, 4vh, 40px);">
+          <p style="background: #0A0A0A; padding: 16px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8A8A8A;">LOCAL / CLOUD ABSTRACTION</p>
+          <p style="background: #0A0A0A; padding: 16px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8A8A8A;">OPTIMISTIC MUTATIONS</p>
+          <p style="background: #0A0A0A; padding: 16px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8A8A8A;">REALTIME SYNC</p>
+          <p style="background: #0A0A0A; padding: 16px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8A8A8A;">ZUSTAND · SUPABASE</p>
+          <p style="background: #0A0A0A; padding: 16px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #8A8A8A;">PWA + SHORTCUTS</p>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <section id="experience" style="margin-top: clamp(72px, 14vh, 160px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #1C1C1C;">
+    <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">EXPERIENCE</h2>
+    <ol style="margin-top: clamp(28px, 5vh, 56px);">
+      <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(16px, 3vw, 48px); padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #1C1C1C;">
+        <div>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #D9FF00;">SEP 2025 — PRESENT</p>
+          <h3 style="margin-top: 10px; font-size: clamp(24px, 3vw, 42px); font-weight: 700; letter-spacing: -0.03em; line-height: 1;">BRAINYMED</h3>
+          <p style="margin-top: 6px; font-size: 15px; color: #8A8A8A;">Software Engineering Intern · Remote</p>
+        </div>
+        <ul style="display: grid; gap: 10px; max-width: 58ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">
+          <li>Built end-to-end workflow automations with Playwright, Selenium and n8n, eliminating hundreds of hours of manual processing across client operations.</li>
+          <li>Designed and deployed Python automation pipelines for real product workflows in a fully remote, cross-timezone team.</li>
+          <li>Shipped production automation features autonomously — scoped, built, tested and delivered with minimal supervision.</li>
+        </ul>
+      </li>
+      <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(16px, 3vw, 48px); padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #1C1C1C;">
+        <div>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #D9FF00;">FEB 2025 — PRESENT</p>
+          <h3 style="margin-top: 10px; font-size: clamp(24px, 3vw, 42px); font-weight: 700; letter-spacing: -0.03em; line-height: 1;">NOVUS CLUB</h3>
+          <p style="margin-top: 6px; font-size: 15px; color: #8A8A8A;">Co-founder · Technical Lead, AI/ML &amp; Data Science</p>
+        </div>
+        <ul style="display: grid; gap: 10px; max-width: 58ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">
+          <li>Co-founded the club from zero to an active community of 100+ members, running 10+ college hackathons and one national inter-college hackathon with participants from the IITs.</li>
+          <li>Lead the AI/ML and data science division, shifting the culture from slide decks to shipped projects.</li>
+          <li>Run weekly technical sessions on Python, ML, model deployment and modern AI tooling.</li>
+          <li>Partnered with global platforms including Perplexity, via Comet, as Campus Partner.</li>
+        </ul>
+      </li>
+      <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(16px, 3vw, 48px); padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #1C1C1C; border-bottom: 1px solid #1C1C1C;">
+        <div>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">JUN — JUL 2025</p>
+          <h3 style="margin-top: 10px; font-size: clamp(24px, 3vw, 42px); font-weight: 700; letter-spacing: -0.03em; line-height: 1;">VAULTOFCODES</h3>
+          <p style="margin-top: 6px; font-size: 15px; color: #8A8A8A;">Python Programming Intern</p>
+        </div>
+        <ul style="display: grid; gap: 10px; max-width: 58ch; font-size: 15px; line-height: 1.55; color: #A8A8A8;">
+          <li>Wrote modular Python and integrated APIs into application features.</li>
+          <li>Ran code reviews that cut post-deployment bugs by 25%, delivering with a remote team two weeks ahead of schedule.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="eng-h" style="margin-top: clamp(72px, 14vh, 160px);">
+    <h2 id="eng-h" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">HOW I BUILD</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: #1C1C1C; margin-top: clamp(28px, 5vh, 56px); border: 1px solid #1C1C1C;">
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">AI / ML</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">TensorFlow · OpenCV · YOLO · LangChain · spaCy · LLMs · prompt engineering · NLP</p>
+      </div>
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">AUTOMATION</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">Playwright · Selenium · n8n · Windows UI Automation · webhooks · schedulers · retries</p>
+      </div>
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">BACKEND</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">FastAPI · Flask · Node.js · Express · REST APIs · SQLAlchemy · auth &amp; RBAC</p>
+      </div>
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">FRONTEND</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">React · TypeScript · JavaScript · Zustand · Tailwind · Cesium / Resium · PWA</p>
+      </div>
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">DATA</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">Python · pandas · matplotlib · NetworkX · SQL · SQLite · MongoDB · Supabase · OpenStreetMap / Overpass</p>
+      </div>
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">TOOLING</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">Git · Cursor · Claude Code · v0 · Bolt · multithreading · testing · deployment</p>
+      </div>
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">WHERE IDEAS START</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">observation · situations · environment</p>
+      </div>
+      <div style="background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">INTEREST</h3>
+        <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.9; color: #A8A8A8;">loads of free AI tools · computers &amp; machines</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="rec-h" style="margin-top: clamp(72px, 14vh, 160px);">
+    <h2 id="rec-h" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">BUILDING</h2>
+    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: clamp(24px, 4vh, 44px); padding-top: clamp(20px, 3vh, 32px); border-top: 1px solid #1C1C1C;">
+      <li>
+        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">9×</p>
+        <p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A8A8A;">HACKATHON WINNER</p>
+      </li>
+      <li>
+        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">10+</p>
+        <p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A8A8A;">HACKATHONS ORGANISED</p>
+      </li>
+      <li>
+        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">100+</p>
+        <p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A8A8A;">MEMBERS UPSKILLED</p>
+      </li>
+      <li>
+        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">6</p>
+        <p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A8A8A;">SYSTEMS SHIPPED ABOVE</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="problem-solving" style="margin-top: clamp(72px, 14vh, 160px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #1C1C1C;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">COMPETITIVE PROGRAMMING</h2>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #4A4A4A;">SOURCE: CODOLIO PROFILE</p>
+    </div>
+
+    <p style="margin-top: clamp(24px, 4vh, 48px); max-width: 30ch; font-size: clamp(18px, 2vw, 30px); font-weight: 500; line-height: 1.3; letter-spacing: -0.015em;">The other side of building systems: breaking problems down.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(20px, 4vw, 56px); align-items: end; margin-top: clamp(32px, 6vh, 64px);">
+      <div>
+        <p style="font-size: clamp(88px, 15vw, 210px); font-weight: 700; line-height: 0.82; letter-spacing: -0.05em; color: #D9FF00;">#29</p>
+        <p style="margin-top: 26px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; line-height: 1.4; color: #8A8A8A;">GLOBALLY ON CODOLIO</p>
+      </div>
+      <p style="max-width: 20ch; font-size: clamp(26px, 4vw, 54px); font-weight: 700; line-height: 0.98; letter-spacing: -0.035em;">4,644 problems.<br>29 contests.<br><span style="color: #8A8A8A;">Still solving.</span></p>
+    </div>
+
+    <ul style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #1C1C1C; margin-top: clamp(32px, 6vh, 64px); border: 1px solid #1C1C1C;">
+      <li style="background: #0A0A0A; padding: clamp(18px, 2.6vw, 28px);"><p style="font-size: clamp(28px, 3.6vw, 48px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95;">4,644</p><p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">QUESTIONS SOLVED</p></li>
+      <li style="background: #0A0A0A; padding: clamp(18px, 2.6vw, 28px);"><p style="font-size: clamp(28px, 3.6vw, 48px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95;">29</p><p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">CONTESTS ATTENDED</p></li>
+      <li style="background: #0A0A0A; padding: clamp(18px, 2.6vw, 28px);"><p style="font-size: clamp(28px, 3.6vw, 48px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95;">180</p><p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">ACTIVE DAYS</p></li>
+      <li style="background: #0A0A0A; padding: clamp(18px, 2.6vw, 28px);"><p style="font-size: clamp(28px, 3.6vw, 48px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95;">5,618</p><p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">SUBMISSIONS</p></li>
+      <li style="background: #0A0A0A; padding: clamp(18px, 2.6vw, 28px);"><p style="font-size: clamp(28px, 3.6vw, 48px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95;">114</p><p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">MAX STREAK</p></li>
+      <li style="background: #0A0A0A; padding: clamp(18px, 2.6vw, 28px);"><p style="font-size: clamp(28px, 3.6vw, 48px); font-weight: 700; letter-spacing: -0.03em; line-height: 0.95;">24</p><p style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">AWARDS</p></li>
+    </ul>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: 1px; border: 1px solid #1C1C1C;">
+      <div style="flex: 1 1 280px; background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D9FF00;">LEETCODE</p>
+        <div style="display: flex; align-items: baseline; gap: clamp(20px, 4vw, 44px); margin-top: 18px; flex-wrap: wrap;">
+          <div><p style="font-size: clamp(34px, 4.4vw, 60px); font-weight: 700; letter-spacing: -0.035em; line-height: 0.95;">1784</p><p style="margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">CURRENT RATING</p></div>
+          <div><p style="font-size: clamp(22px, 2.4vw, 32px); font-weight: 500; letter-spacing: -0.02em; line-height: 1; color: #8A8A8A;">1784</p><p style="margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">MAX RATING</p></div>
+        </div>
+        <p style="margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">20 CONTESTS</p>
+      </div>
+      <div style="flex: 1 1 280px; background: #0A0A0A; padding: clamp(20px, 3vw, 32px);">
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D9FF00;">CODECHEF ★★★★★</p>
+        <div style="display: flex; align-items: baseline; gap: clamp(20px, 4vw, 44px); margin-top: 18px; flex-wrap: wrap;">
+          <div><p style="font-size: clamp(34px, 4.4vw, 60px); font-weight: 700; letter-spacing: -0.035em; line-height: 0.95;">2017</p><p style="margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">CURRENT RATING</p></div>
+          <div><p style="font-size: clamp(22px, 2.4vw, 32px); font-weight: 500; letter-spacing: -0.02em; line-height: 1; color: #8A8A8A;">2192</p><p style="margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">MAX RATING</p></div>
+        </div>
+        <p style="margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">9 CONTESTS</p>
+      </div>
+      <div style="flex: 1 1 280px; background: #0A0A0A; padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; justify-content: space-between; gap: 18px;">
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D9FF00;">MOST RECENT CONTEST</p>
+        <div>
+          <p style="font-size: clamp(20px, 2.2vw, 28px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1;">LEETCODE WEEKLY 518</p>
+          <p style="margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #8A8A8A;">06 SEP 2026 · RANK 233</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 5vw, 64px); margin-top: clamp(40px, 7vh, 80px);">
+      <div>
+        <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #6E6E6E; font-weight: 400;">CONTESTS BY PLATFORM</h3>
+        <ul style="display: flex; gap: 2px; margin-top: 18px;">
+          <li style="height: 10px; background: #D9FF00; width: 69%;"></li>
+          <li style="height: 10px; background: #4A5200; width: 31%;"></li>
+        </ul>
+        <ul style="display: grid; gap: 10px; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A8A8A8;">
+          <li style="display: flex; justify-content: space-between; gap: 16px; padding-bottom: 10px; border-bottom: 1px solid #1C1C1C;"><span>LEETCODE</span><span style="color: #FAFAFA;">20</span></li>
+          <li style="display: flex; justify-content: space-between; gap: 16px; padding-bottom: 10px; border-bottom: 1px solid #1C1C1C;"><span>CODECHEF</span><span style="color: #FAFAFA;">9</span></li>
+        </ul>
+        <h3 style="margin-top: clamp(28px, 5vh, 44px); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #6E6E6E; font-weight: 400;">WHAT THE 4,644 IS MADE OF</h3>
+        <ul style="display: grid; gap: 14px; margin-top: 18px;">
+          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A8A8A8;"><span>COMPETITIVE PROGRAMMING</span><span style="color: #FAFAFA;">3,776</span></div><div style="height: 2px; background: #1C1C1C; margin-top: 8px;"><div style="height: 2px; background: #D9FF00; width: 100%;"></div></div></li>
+          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A8A8A8;"><span>DSA</span><span style="color: #FAFAFA;">533</span></div><div style="height: 2px; background: #1C1C1C; margin-top: 8px;"><div style="height: 2px; background: #D9FF00; width: 14.1%;"></div></div></li>
+          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A8A8A8;"><span>FUNDAMENTALS</span><span style="color: #FAFAFA;">335</span></div><div style="height: 2px; background: #1C1C1C; margin-top: 8px;"><div style="height: 2px; background: #D9FF00; width: 8.9%;"></div></div></li>
+        </ul>
+        <h3 style="margin-top: clamp(28px, 5vh, 44px); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #6E6E6E; font-weight: 400;">DSA BY DIFFICULTY — 533 TOTAL</h3>
+        <ul style="display: grid; gap: 14px; margin-top: 18px;">
+          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A8A8A8;"><span>EASY</span><span style="color: #FAFAFA;">269</span></div><div style="height: 2px; background: #1C1C1C; margin-top: 8px;"><div style="height: 2px; background: #6E6E6E; width: 100%;"></div></div></li>
+          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A8A8A8;"><span>MEDIUM</span><span style="color: #FAFAFA;">208</span></div><div style="height: 2px; background: #1C1C1C; margin-top: 8px;"><div style="height: 2px; background: #6E6E6E; width: 77.3%;"></div></div></li>
+          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A8A8A8;"><span>HARD</span><span style="color: #FAFAFA;">56</span></div><div style="height: 2px; background: #1C1C1C; margin-top: 8px;"><div style="height: 2px; background: #6E6E6E; width: 20.8%;"></div></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #6E6E6E; font-weight: 400;">WHERE THE PROBLEMS SIT</h3>
+        <ul style="display: grid; gap: 13px; margin-top: 18px;">
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">ARRAYS</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 100%;"></span></span><span style="color: #FAFAFA;">199</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">STRINGS</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 53.8%;"></span></span><span style="color: #FAFAFA;">107</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">MATH</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 52.3%;"></span></span><span style="color: #FAFAFA;">104</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">HASHMAP / SET</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 39.7%;"></span></span><span style="color: #FAFAFA;">79</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">DATABASE</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 30.7%;"></span></span><span style="color: #FAFAFA;">61</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">SORTING</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 22.1%;"></span></span><span style="color: #FAFAFA;">44</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">DYNAMIC PROGRAMMING</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 20.1%;"></span></span><span style="color: #FAFAFA;">40</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">GREEDY</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 19.1%;"></span></span><span style="color: #FAFAFA;">38</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">ALGORITHMS</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 16.1%;"></span></span><span style="color: #FAFAFA;">32</span></li>
+          <li style="display: grid; grid-template-columns: minmax(0, 17ch) 1fr auto; gap: 14px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;"><span style="color: #A8A8A8;">TWO POINTERS</span><span style="height: 1px; background: #1C1C1C; display: block;"><span style="height: 1px; background: #D9FF00; display: block; width: 14.6%;"></span></span><span style="color: #FAFAFA;">29</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top: clamp(40px, 7vh, 80px); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #6E6E6E; font-weight: 400;">PROFILES</h3>
+    <ul style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: 18px; border: 1px solid #1C1C1C;">
+      <li style="flex: 1 1 230px; display: flex;"><a href="https://codolio.com/profile/vince" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #0A0A0A; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">CODOLIO ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #8A8A8A;">#29 globally · aggregate profile</span></a></li>
+      <li style="flex: 1 1 230px; display: flex;"><a href="https://leetcode.com/u/QJxTr21cFq/" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #0A0A0A; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">LEETCODE ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #8A8A8A;">1784 rating · 20 contests</span></a></li>
+      <li style="flex: 1 1 230px; display: flex;"><a href="https://www.codechef.com/users/vince7827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #0A0A0A; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">CODECHEF ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #8A8A8A;">5★ · 2017 rating · 9 contests</span></a></li>
+      <li style="flex: 1 1 230px; display: flex;"><a href="https://github.com/Varshith07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #0A0A0A; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">GITHUB ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #8A8A8A;">Source for every project here</span></a></li>
+      <li style="flex: 1 1 230px; display: flex;"><a href="https://www.geeksforgeeks.org/profile/alonewalker07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #0A0A0A; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">GEEKSFORGEEKS ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #8A8A8A;">Profile</span></a></li>
+      <li style="flex: 1 1 230px; display: flex;"><a href="https://www.hackerrank.com/profile/alonewalker07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #0A0A0A; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">HACKERRANK ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #8A8A8A;">5★ · 308 problems</span></a></li>
+    </ul>
+  </section>
+
+  <section id="about" style="margin-top: clamp(72px, 14vh, 160px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #1C1C1C;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 5vw, 72px);">
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">ABOUT</h2>
+      <div style="grid-column: span 2; min-width: 0;">
+        <p style="max-width: 60ch; font-size: clamp(18px, 2vw, 30px); font-weight: 500; line-height: 1.3; letter-spacing: -0.015em;">I build systems that ship — not prototypes that collect stars.</p>
+        <div style="display: grid; gap: 18px; margin-top: 24px; max-width: 62ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: #A8A8A8;">
+          <p>Most of what I make sits somewhere between AI, systems and automation: things that drive other software, model infrastructure, or read documents nobody wants to read. I learn by building, and the projects on this page are how I got here.</p>
+          <p>I'm a dual-degree student — B.Tech in Computer Science at GVPCDPGC and B.Sc in Data Science &amp; Programming at IIT Madras — currently interning remotely as a software engineer at BrainyMed, where the work is workflow automation and end-to-end systems.</p>
+          <p>I move fast on new tooling, but I still build foundations from scratch when it matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="margin: clamp(72px, 14vh, 160px) 0 clamp(48px, 8vh, 96px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #1C1C1C;">
+    <h2 style="font-size: clamp(40px, 11.5vw, 164px); font-weight: 700; line-height: 0.86; letter-spacing: -0.045em;">BUILD SOMETHING<br><span style="color: #D9FF00;">USEFUL.</span></h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: clamp(32px, 6vh, 72px); border: 1px solid #1C1C1C;">
+      <a href="mailto:sandakavarshith@gmail.com" class="contacttile" style="flex: 1 1 220px; background: #0A0A0A; padding: clamp(20px, 3vw, 28px); display: block;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6E6E6E;">EMAIL</span>
+        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px); word-break: break-word;">sandakavarshith@gmail.com</span>
+      </a>
+      <a href="https://github.com/Varshith07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1 1 220px; background: #0A0A0A; padding: clamp(20px, 3vw, 28px); display: block;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6E6E6E;">GITHUB</span>
+        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px);">Varshith07827 ↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener" class="contacttile" style="flex: 1 1 220px; background: #0A0A0A; padding: clamp(20px, 3vw, 28px); display: block;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6E6E6E;">LINKEDIN</span>
+        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px);">saivarshith- ↗</span>
+      </a>
+      <a href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener" class="contacttile" style="flex: 1 1 220px; background: #0A0A0A; padding: clamp(20px, 3vw, 28px); display: block;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6E6E6E;">RÉSUMÉ</span>
+        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px);">PDF ↗</span>
+      </a>
+    </div>
+    <p style="margin-top: clamp(28px, 5vh, 48px); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #4A4A4A;">VENKATA SAI VARSHITH SANDAKA · VISAKHAPATNAM, INDIA · +91 79811 49423</p>
+  </section>
+</main>
+</div>
+</body>
 </html>

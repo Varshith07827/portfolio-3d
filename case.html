@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case study — Venkata Sai Varshith</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { background: #0A0A0A; }
+  body { margin: 0; background: #0A0A0A; color: #FAFAFA; font-family: "Space Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  * { box-sizing: border-box; }
+  a { color: #FAFAFA; text-decoration: none; }
+  a:hover { color: #D9FF00; }
+  ::selection { background: #D9FF00; color: #0A0A0A; }
+  :focus-visible { outline: 2px solid #D9FF00; outline-offset: 3px; }
+  h1, h2, h3, p, ul, ol, figure { margin: 0; padding: 0; }
+  ul, ol { list-style: none; }
+  img { display: block; max-width: 100%; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
+
+  .taglink { border: 1px solid #D9FF00; color: #D9FF00; }
+  .taglink:hover { background: #D9FF00; color: #0A0A0A; }
+  .navtile:hover { background: #141414; color: #FAFAFA; }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; overflow-x: hidden;">
+
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px clamp(16px, 4vw, 64px); background: rgba(10,10,10,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid #1C1C1C; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">
+  <a href="index.html">← ALL WORK</a>
+  <span id="counter" style="color: #5A5A5A;"></span>
+</header>
+
+<main id="case-main" style="max-width: 1240px; margin: 0 auto; padding: clamp(100px, 15vh, 160px) clamp(16px, 4vw, 64px) clamp(56px, 10vh, 120px);"></main>
+</div>
+
+<script>
+const PROJECTS = [
+  {
+    id: "digitwin", num: "01", name: "DIGITWIN",
+    title: "City-scale digital twin & infrastructure simulation",
+    blurb: "A 3D twin of central London built on real OpenStreetMap geometry, with the water network modelled as a graph you can break, isolate and repair to watch failure propagate through the city.",
+    stack: ["REACT 18", "TYPESCRIPT", "VITE", "CESIUM / RESIUM", "TAILWIND", "PYTHON", "FASTAPI", "PYDANTIC", "HTTPX", "NETWORKX", "OVERPASS API"],
+    links: [{ label: "GITHUB ↗", href: "https://github.com/Varshith07827/DigiTwin" }],
+    image: "assets/digitwin-network.jpeg",
+    imageAlt: "DigiTwin in a browser: 3D London buildings with road and water-network overlays beside a water simulation panel",
+    imageCap: "THE WATER NETWORK DRAWN OVER THE OSM ROAD GRAPH, RUNNING LOCALLY",
+    sections: [
+      { h: "WHAT IT IS", body: ["A browser-based digital twin of central London. Cesium renders the terrain and building footprints; on top of that sit OpenStreetMap road and water layers pulled through the Overpass API, so the geometry is the real city rather than a stand-in."] },
+      { h: "WHY IT MATTERS", body: ["Infrastructure failures are hard to reason about because they cascade. A single broken pipe is not one event — it is a set of buildings without supply, a road that has to close, and a repair sequence that has to be chosen. A twin makes that chain visible before it happens."] },
+      { h: "WHAT I BUILT", body: ["A FastAPI backend fetches OSM roads and water through the Overpass API, converts the result to GeoJSON, and builds a NetworkX graph of the water segments. Pressure propagates from source nodes through that graph, so passing a set of broken pipe IDs returns new per-segment pressures — which the viewer colourises in place.", "Most of the engineering is in the middle: caching and falling back to local GeoJSON when Overpass is unreachable, reconciling messy map data into a graph clean enough to simulate, and keeping the Cesium scene in step with simulation state without re-rendering the city."] }
+    ],
+    now: ["3D BUILDINGS + TERRAIN", "OSM ROAD + WATER OVERLAY", "WATER PRESSURE SIMULATION", "PIPE BREAK / REPAIR", "BUILDING ISOLATION", "ROAD CLOSURE STATE", "LOCAL GEOJSON FALLBACK"],
+    next: ["ELECTRICITY LAYER", "TRAFFIC", "WEATHER", "IOT SENSORS"]
+  },
+  {
+    id: "mantis", num: "02", name: "MANTIS",
+    title: "Browser automation platform",
+    blurb: "Turns browser actions into repeatable automation: record a session once, then replay it as a parameterised workflow with scheduling, retries and an audit trail.",
+    stack: ["NODE.JS", "EXPRESS", "PLAYWRIGHT", "SOCKET.IO", "SQLITE + SEQUELIZE", "CODEGEN", "PDF EXTRACTION"],
+    links: [{ label: "GITHUB ↗", href: "https://github.com/Varshith07827/mantis-automation" }],
+    image: "assets/placeholder-mantis.svg",
+    imageAlt: "Mantis placeholder image",
+    imageCap: "SCREENSHOT COMING SOON",
+    sections: [
+      { h: "WHAT IT IS", body: ["An automation platform built on Playwright. You record a browser session, Mantis generates the workflow from it, and from then on that workflow is a first-class object: parameterised, scheduled, monitored and re-runnable."] },
+      { h: "WHY IT MATTERS", body: ["A one-off browser script is fragile and invisible. The interesting problem is not driving a browser — it is making the result durable: knowing which runs failed and why, retrying without duplicating work, and handing the thing to someone who did not write it."] },
+      { h: "WHAT I BUILT", body: ["A Playwright codegen wrapper turns a recorded session into a runnable test case, parameterised so one recording serves many inputs, with fallback and retry behaviour for the selectors that inevitably drift. A PDF extraction and upload step handles the documents these workflows tend to end at.", "An Express server fronts it with a dashboard, Socket.IO streams run progress live, and SQLite through Sequelize keeps the run history, audit log and analytics — so the platform can be operated rather than just executed."] }
+    ],
+    now: ["SESSION RECORD / REPLAY", "GENERATED TEST CASES", "PARAMETERISED INPUTS", "LIVE RUN STREAMING", "RETRIES + FALLBACKS", "PDF EXTRACTION + UPLOAD", "AUDIT LOGS", "RUN ANALYTICS"]
+  },
+  {
+    id: "winspark", num: "03", name: "WINSPARK",
+    title: "Desktop automation engine",
+    blurb: "Software controlling software. It drives WhatsApp Desktop entirely through the Windows UI Automation tree — discovering chats, POSTing each incoming message to that chat's webhook, and sending back whatever the endpoint replies.",
+    stack: ["PYTHON", "WINDOWS UI AUTOMATION", "PYWIN32", "PYSIDE6", "MONGODB", "WEBHOOKS", "PYTEST"],
+    links: [{ label: "GITHUB ↗", href: "https://github.com/Varshith07827/Winsparkpro" }],
+    image: "assets/placeholder-winspark.svg",
+    imageAlt: "WinSpark placeholder image",
+    imageCap: "SCREENSHOT COMING SOON",
+    sections: [
+      { h: "WHAT IT IS", body: ["A desktop automation engine for Windows, built as a single-purpose tool: it watches the WhatsApp Desktop chat list through the accessibility tree, registers what it finds, and runs a webhook loop for the chats you switch on. No OCR, no screenshots, no model in the loop."] },
+      { h: "WHY IT MATTERS", body: ["Plenty of real work still lives in desktop software with no API. Driving it means working against interfaces that were never meant to be automated — and getting the failure behaviour right, because the cost of a duplicate message is higher than the cost of a missed one."] },
+      { h: "WHAT I BUILT", body: ["A 3-second poll loop with a single worker: persist → webhook → persist → send → verify. Every UIA call is owned by one STA thread; reading is fully headless, and a send only counts as sent once WhatsApp clears the compose box as proof.", "The reliability work is the substance. State is written before each irreversible step, so restart recovery can tell what the outside world has already seen — a crash mid-webhook parks the message rather than retrying it. MongoDB is authoritative, with an atomically-written JSON mirror so a database outage degrades instead of stopping.", "121 pytest tests cover the row parser against strings captured from a live window, the webhook retry policy, storage guarantees, the pipeline against a real HTTP server, and restart recovery."] }
+    ],
+    now: ["UIA CHAT DISCOVERY", "HEADLESS READING", "PER-CHAT WEBHOOKS", "VERIFIED SENDS", "MONGODB + JSON MIRROR", "CRASH-POINT RECOVERY", "INBOUND SEND API", "POLLED RELAY MODE", "121 PYTEST TESTS"]
+  },
+  {
+    id: "green-ring", num: "04", name: "GREEN RING",
+    title: "WhatsApp automation & messaging infrastructure",
+    blurb: "Messaging infrastructure rather than a WhatsApp client: a FastAPI bridge exposing authenticated send and media operations, with every message archived to MongoDB Atlas.",
+    stack: ["PYTHON", "FASTAPI", "UVICORN", "PYDANTIC", "HTTPX", "PYMONGO", "MONGODB ATLAS"],
+    links: [{ label: "GITHUB ↗", href: "https://github.com/Varshith07827/green-ring" }],
+    image: "assets/placeholder-green-ring.svg",
+    imageAlt: "Green Ring placeholder image",
+    imageCap: "SCREENSHOT COMING SOON",
+    sections: [
+      { h: "WHAT IT IS", body: ["An HTTP layer that exposes WhatsApp messaging as ordinary infrastructure — authenticate, send, attach media — so other systems can treat it as a service instead of an app someone has to sit in front of."] },
+      { h: "WHY IT MATTERS", body: ["Messaging is where a lot of operational work actually happens. Once it is behind an API with authentication and a durable record, it can be automated, audited and joined to everything else."] },
+      { h: "WHAT I BUILT", body: ["A FastAPI bridge over an OpenWA session: authenticated endpoints for sending text and uploaded media, httpx for the calls out, and Pydantic settings so configuration is validated at startup rather than discovered at runtime.", "Every message passing through is archived to MongoDB Atlas through pymongo, which makes the system debuggable and gives downstream tools something to read. Shell installers register it as a service, so it runs as infrastructure rather than a script someone starts."] }
+    ],
+    now: ["AUTH + SESSION HANDLING", "SEND ENDPOINT", "MULTIPART MEDIA UPLOAD", "MONGODB ATLAS ARCHIVAL", "VALIDATED CONFIG", "SERVICE INSTALL SCRIPTS", "POSTMAN COLLECTION"]
+  },
+  {
+    id: "pii", num: "05", name: "AI PII DETECTOR",
+    title: "Privacy detection & data masking",
+    blurb: "Finds sensitive information before it becomes a problem. A hybrid regex and spaCy pipeline reads five file formats, scores risk, and masks what it finds.",
+    stack: ["PYTHON", "FLASK", "REGEX", "SPACY NLP", "BATCH / CLI", "TESTING"],
+    links: [{ label: "GITHUB ↗", href: "https://github.com/Varshith07827/AI-PII-Detector" }],
+    image: "assets/placeholder-pii.svg",
+    imageAlt: "AI PII Detector placeholder image",
+    imageCap: "SCREENSHOT COMING SOON",
+    sections: [
+      { h: "WHAT IT IS", body: ["A Flask application and CLI that detects personally identifiable information across PDF, DOCX, CSV, XLSX and TXT files, assigns a risk score, and produces a masked copy of the document."] },
+      { h: "WHY IT MATTERS", body: ["Sensitive data leaks through ordinary files — an exported spreadsheet, an attached PDF. Catching it needs to be cheap enough to run over everything, not a manual review."] },
+      { h: "WHAT I BUILT", body: ["A hybrid detection pipeline: regex catches the structured identifiers reliably, and an optional spaCy NLP pass picks up names and entities that patterns miss. Results are scored so a reviewer can triage rather than read everything.", "Batch processing and a CLI make it usable over directories of files, and the detection logic is covered by tests — a pipeline that silently stops matching is worse than none."] }
+    ],
+    now: ["PDF / DOCX / CSV / XLSX / TXT", "REGEX DETECTION", "OPTIONAL SPACY PASS", "RISK SCORING", "AUTOMATED MASKING", "BATCH + CLI PROCESSING"]
+  },
+  {
+    id: "atlas", num: "06", name: "ATLAS",
+    title: "Personal productivity system",
+    blurb: "Tasks, notes and time in one calm surface — with a store abstraction underneath that serves either local storage or Supabase without the UI knowing which.",
+    stack: ["REACT 19", "TYPESCRIPT", "VITE", "ZUSTAND", "SUPABASE", "TAILWIND", "RADIX UI", "DND-KIT", "FULLCALENDAR", "PWA"],
+    links: [{ label: "GITHUB ↗", href: "https://github.com/Varshith07827/atlas" }],
+    image: "assets/placeholder-atlas.svg",
+    imageAlt: "Atlas placeholder image",
+    imageCap: "SCREENSHOT COMING SOON",
+    sections: [
+      { h: "WHAT IT IS", body: ["A second brain for tasks, notes and time. Deliberately quiet: keyboard-first, no notifications competing for attention, and fast enough that capturing something costs nothing."] },
+      { h: "WHY IT MATTERS", body: ["The interesting part is not the todo list. It is that the same app runs entirely on-device with no account, or backed by Supabase with realtime sync — and the interface is identical either way."] },
+      { h: "WHAT I BUILT", body: ["One store abstraction over two backends, with Zustand holding UI state. Mutations apply optimistically so the app never waits on a round trip, then reconcile against the server; realtime subscriptions keep other sessions current.", "The surface is built from Radix primitives with dnd-kit for reordering and FullCalendar for the time views. A PWA shell makes it installable and usable offline, and keyboard shortcuts cover the paths used most."] }
+    ],
+    now: ["TASKS · NOTES · TIME", "LOCAL STORAGE MODE", "SUPABASE CLOUD MODE", "OPTIMISTIC MUTATIONS", "REALTIME SYNC", "DRAG REORDERING", "CALENDAR VIEWS", "INSTALLABLE PWA", "KEYBOARD SHORTCUTS"]
+  }
+];
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function render() {
+  const id = location.hash.replace("#", "") || "digitwin";
+  const i = Math.max(0, PROJECTS.findIndex(p => p.id === id));
+  const p = PROJECTS[i];
+  const others = PROJECTS.filter(o => o.id !== p.id);
+
+  document.title = p.name + " — Venkata Sai Varshith";
+  document.getElementById("counter").textContent = p.num + " / 06";
+
+  const stackHtml = p.stack.map(t => `<li style="padding: 9px 12px; border: 1px solid #262626;">${esc(t)}</li>`).join("");
+  const linksHtml = p.links.map(l => `<li><a href="${esc(l.href)}" target="_blank" rel="noopener" class="taglink" style="display: inline-block; padding: 11px 15px;">${esc(l.label)}</a></li>`).join("");
+  const sectionsHtml = p.sections.map(s => `
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(16px, 4vw, 56px); padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #1C1C1C;">
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">${esc(s.h)}</h2>
+      <div style="grid-column: span 2; min-width: 0; display: grid; gap: 14px; max-width: 62ch; font-size: clamp(15px, 1.25vw, 18px); line-height: 1.6; color: #C8C8C8;">
+        ${s.body.map(para => `<p>${esc(para)}</p>`).join("")}
+      </div>
+    </section>`).join("");
+  const nowHtml = p.now.map(n => `<li style="flex: 1 1 200px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #C8C8C8;">${esc(n)}</li>`).join("");
+  const nextHtml = (p.next && p.next.length) ? `
+    <div style="margin-top: clamp(24px, 4vh, 40px);">
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E;">NEXT</p>
+      <ul style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: clamp(16px, 2vh, 24px); border: 1px solid #1C1C1C;">
+        ${p.next.map(n => `<li style="flex: 1 1 200px; background: #0A0A0A; padding: 18px 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5A5A5A;">${esc(n)}</li>`).join("")}
+      </ul>
+    </div>` : "";
+  const othersHtml = others.map(o => `
+    <a href="case.html#${o.id}" class="navtile" style="flex: 1 1 200px; background: #0A0A0A; padding: clamp(18px, 2.6vw, 26px); display: block;">
+      <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6E6E6E;">${o.num}</span>
+      <span style="display: block; margin-top: 10px; font-size: clamp(17px, 1.6vw, 23px); font-weight: 700; letter-spacing: -0.02em;">${o.name} →</span>
+    </a>`).join("");
+
+  document.getElementById("case-main").innerHTML = `
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #D9FF00;">${p.num} — CASE STUDY</p>
+    <h1 style="margin-top: clamp(20px, 3vh, 32px); font-size: clamp(40px, 10vw, 132px); font-weight: 700; line-height: 0.88; letter-spacing: -0.045em;">${esc(p.name)}</h1>
+    <p style="margin-top: 16px; max-width: 30ch; font-size: clamp(19px, 2.4vw, 38px); font-weight: 500; line-height: 1.12; letter-spacing: -0.02em;">${esc(p.title)}</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(20px, 4vw, 56px); margin-top: clamp(32px, 6vh, 64px); padding-top: clamp(24px, 4vh, 40px); border-top: 1px solid #1C1C1C;">
+      <p style="max-width: 52ch; font-size: clamp(16px, 1.4vw, 20px); line-height: 1.55; color: #A8A8A8;">${esc(p.blurb)}</p>
+      <div>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6E6E6E;">STACK</p>
+        <ul style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #A8A8A8;">${stackHtml}</ul>
+        <ul style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em;">${linksHtml}</ul>
+      </div>
+    </div>
+
+    <figure style="margin-top: clamp(32px, 6vh, 72px); border: 1px solid #1C1C1C; background: #0D0D0D;">
+      <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" loading="lazy" style="width: 100%; height: auto;">
+      <figcaption style="padding: 12px 16px; border-top: 1px solid #1C1C1C; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6E6E6E;">${esc(p.imageCap)}</figcaption>
+    </figure>
+
+    <div style="margin-top: clamp(48px, 9vh, 104px);">${sectionsHtml}</div>
+
+    <section style="padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #1C1C1C;">
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #6E6E6E; font-weight: 400;">WORKING TODAY</h2>
+      <ul style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: clamp(20px, 3vh, 32px); border: 1px solid #1C1C1C;">${nowHtml}</ul>
+      ${nextHtml}
+    </section>
+
+    <nav aria-label="Other projects" style="display: flex; flex-wrap: wrap; gap: 1px; background: #1C1C1C; margin-top: clamp(48px, 9vh, 104px); border: 1px solid #1C1C1C;">${othersHtml}</nav>
+
+    <p style="margin-top: clamp(32px, 6vh, 64px); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #4A4A4A;">VENKATA SAI VARSHITH SANDAKA · <a href="mailto:sandakavarshith@gmail.com" style="color: #6E6E6E;">SANDAKAVARSHITH@GMAIL.COM</a></p>
+  `;
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener("hashchange", render);
+render();
+</script>
+</body>
+</html>

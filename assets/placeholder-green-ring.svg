@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1C1C1C" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="260" fill="#0D0D0D"/>
+  <rect width="1200" height="260" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="259" fill="none" stroke="#1C1C1C"/>
+  <text x="50%" y="44%" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="60" letter-spacing="-1" fill="#FAFAFA">GREEN RING</text>
+  <text x="50%" y="60%" text-anchor="middle" font-family="Courier New, monospace" font-size="14" letter-spacing="2" fill="#8A8A8A">WHATSAPP AUTOMATION &amp; MESSAGING INFRASTRUCTURE</text>
+</svg>

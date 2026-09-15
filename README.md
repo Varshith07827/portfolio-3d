@@ -1,16 +1,23 @@
-# React + Vite
+# portfolio-3d
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for Venkata Sai Varshith — AI / Systems / Automation.
 
-Currently, two official plugins are available:
+Plain static HTML/CSS/JS, no build step:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [`index.html`](index.html) — home page: intro, six selected projects, experience, stack, competitive-programming stats, about, contact.
+- [`case.html`](case.html) — case-study page for each project, rendered client-side from a `PROJECTS` array based on the URL hash (e.g. `case.html#digitwin`).
+- [`assets/`](assets) — project screenshots and placeholder cover images (used where a real screenshot isn't available yet — swap the file in `assets/` and the `image` field in `case.html` once one is).
 
-## React Compiler
+## Running locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+No build tooling required — serve the folder with any static file server, e.g.
 
-## Expanding the ESLint configuration
+```bash
+python3 -m http.server 8000
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+then open `http://localhost:8000`.
+
+## Deployment
+
+Served via GitHub Pages from the `main` branch. Custom domain configured through the `CNAME` file.
