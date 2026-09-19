@@ -20,4 +20,5 @@ then open `http://localhost:8000`.
 
 ## Deployment
 
-Served via GitHub Pages from the `main` branch. Custom domain configured through the `CNAME` file.
+Served via GitHub Pages from the `main` branch. Custom domain configured through the `CNAME` file (`saiv.dev`).
+For this to work, the `saiv.dev` DNS records must point to GitHub Pages.
